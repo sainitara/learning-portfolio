@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #b8f5ff">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>EssayWay- Writing</title>
+
+</head>
+
+<body>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <h3 class="subtitle is-3">EssayWay</h3>
+                <h5 class="subtitle is-5">The write way to learn writing</h5>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-brand">
+
+                </div>
+                <a class="navbar-item" href="/">
+                    Home
+                </a>
+                <a class="navbar-item" href="prompts">
+                    Prompts
+                </a>
+                <a class="navbar-item" href="write">
+                    Write
+                </a>
+                <a class="navbar-item" href="feedback">
+                    Feedback
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="control p-6">
+        <textarea
+                id="essay"
+                class="textarea is-primary pb-3"
+                placeholder="Write here (if you close the tab, your changes will not be saved)"
+                name="input"
+                onchange="ok()"
+        ></textarea>
+        <a href="data:text/plain;charset=utf-8," id="download" download="essay.txt" class="button is-primary">Download writing</a>
+    </div>
+    <script>
+        function ok() {
+            document.getElementById("download").href = "data:text/plain;base64," + atob(document.getElementById("essay").value);
+        }
+    </script>
+</body>
+</html>
