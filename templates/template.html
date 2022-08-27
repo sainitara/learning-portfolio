@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: #b8f5ff">
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title></title>
 </head>
-<body class="p-6">
-    <div class="columns">
+<body>
+    <div class="hero is-primary">
+        <div class="hero-body">
+            <p class="title">Essay Way</p>
+            <p class="subtitle">The write way to edit your essay</p>
+        </div>
+    </div>
+    <div class="columns p-6">
         <div class="column is-two-thirds">
             <form action="{{ url_for("main")}}" method="post">
                <div class="field">
                     <div class="control is-medium pb-6">
                         <textarea class="textarea is-primary" placeholder="Paste or type your writing here." name="input"></textarea>
                     </div>
+                    <p class="subtitle pb-1">What type of writing do you want to analyze?</p>
                     <div class="control is_medium pb-6">
                         <div class="select is-primary">
                             <select name="type">
@@ -36,7 +43,7 @@
         </div>
         <div class="column is-one-third">
             <div class="control">
-                <textarea class="textarea {{loading}}" readonly>{{output}}</textarea>
+                <textarea class="textarea {{loading}}" placeholder="Feedback" readonly>{{output}}</textarea>
             </div>
         </div>
     </div>
