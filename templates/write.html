@@ -39,16 +39,17 @@
     <div class="control p-6">
         <textarea
                 id="essay"
-                class="textarea is-primary pb-3"
+                class="textarea is-primary"
                 placeholder="Write here (if you close the tab, your changes will not be saved)"
                 name="input"
                 onchange="ok()"
         ></textarea>
+        <br>
         <a href="data:text/plain;charset=utf-8," id="download" download="essay.txt" class="button is-primary">Download writing</a>
     </div>
     <script>
         function ok() {
-            document.getElementById("download").href = "data:text/plain;base64," + atob(document.getElementById("essay").value);
+            document.getElementById("download").href = "data:text/plain;base64," + btoa(document.getElementById("essay").value);
         }
     </script>
 </body>
