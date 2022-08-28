@@ -23,7 +23,7 @@ def prompts():
         if input2 == "Expository paragraph":
             result = openai.Completion.create(
                 model="text-davinci-002",
-                prompt="Create a writing prompt for an expository paragraph about " + input1 + "\nTeacher: Here is my lengthy response:",
+                prompt="Create a writing prompt for an expository paragraph about " + input1,
                 temperature=0,
                 max_tokens=256,
                 top_p=1,
@@ -33,7 +33,7 @@ def prompts():
         elif input2 == "Expository essay":
             result = openai.Completion.create(
                 model="text-davinci-002",
-                prompt="Create a writing prompt for an expository essay about " + input1 + "\nTeacher: Here is my lengthy response:",
+                prompt="Create a writing prompt for an expository essay about " + input1,
                 temperature=0,
                 max_tokens=256,
                 top_p=1,
@@ -43,7 +43,7 @@ def prompts():
         elif input2 == "Narrative story":
             result = openai.Completion.create(
                 model="text-davinci-002",
-                prompt="Create a writing prompt for a narrative story about " + input1 + "\nTeacher: Here is my lengthy response:",
+                prompt="Create a writing prompt for a narrative story about " + input1,
                 temperature=0,
                 max_tokens=256,
                 top_p=1,
@@ -53,7 +53,7 @@ def prompts():
         elif input2 == "Informational paragraph":
             result = openai.Completion.create(
                 model="text-davinci-002",
-                prompt="Create a writing prompt for an informational paragraph about " + input1 + "\nTeacher: Here is my lengthy response:",
+                prompt="Create a writing prompt for an informational paragraph about " + input1,
                 temperature=0,
                 max_tokens=256,
                 top_p=1,
@@ -63,7 +63,7 @@ def prompts():
         elif input2 == "Informational article":
             result = openai.Completion.create(
                 model="text-davinci-002",
-                prompt="Create a writing prompt for an informational article about " + input1 + "\nTeacher: Here is my lengthy response:",
+                prompt="Create a writing prompt for an informational article about " + input1,
                 temperature=0,
                 max_tokens=256,
                 top_p=1,
@@ -73,7 +73,7 @@ def prompts():
         elif input2 == "Argumentative paragraph":
             result = openai.Completion.create(
                 model="text-davinci-002",
-                prompt="Create a writing prompt for an argumentative paragraph about " + input1 + "\nTeacher: Here is my lengthy response:",
+                prompt="Create a writing prompt for an argumentative paragraph about " + input1,
                 temperature=0,
                 max_tokens=256,
                 top_p=1,
@@ -83,7 +83,7 @@ def prompts():
         elif input2 == "Argumentative essay":
             result = openai.Completion.create(
                 model="text-davinci-002",
-                prompt="Create a writing prompt for an argumentative essay about " + input1 + "\nTeacher: Here is my lengthy response:",
+                prompt="Create a writing prompt for an argumentative essay about " + input1,
                 temperature=0,
                 max_tokens=256,
                 top_p=1,
