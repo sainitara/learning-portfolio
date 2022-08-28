@@ -1,4 +1,5 @@
-# Eduhack
+# EssayWay
+
 
 This is our project for the EmP Eduhack hackathon.
 ## Inspiration
