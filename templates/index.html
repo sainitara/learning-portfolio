@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: #b8f5ff">
+<html lang="en" style="background-color: #9fddf9">
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='bulma.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EssayWay | Home</title>
+    <title>Learning Portfolio | Home</title>
 </head>
 <body>
-    <nav class="navbar is-primary" role="navigation" aria-label="main navigation" style="height: 6rem !important">
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation" style="height: 4rem !important">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-                <img src="{{ url_for('static', filename='essayway.png') }}" alt="logo" style="width:7rem; height:6.3rem; !important">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" style="width:10rem; height:3rem">
             </a>
         </div>
         <div class="navbar-menu">
@@ -18,24 +18,39 @@
                 <a class="navbar-item" href="/">
                     Home
                 </a>
-                <a class="navbar-item" href="prompts">
-                    Prompts
+                <a class="navbar-item" href="trends">
+                    Trends
                 </a>
-                <a class="navbar-item" href="write">
-                    Write
-                </a>
-                <a class="navbar-item" href="feedback">
-                    Feedback
+                <a class="navbar-item" href="plans">
+                    Plans
                 </a>
             </div>
         </div>
     </nav>
     <div class="content p-6" style="height:300%;">
-        <h1 class="title is-1 is-centered pb-3" >EssayWay</h1>
-        <h4 class="subtitle is-4 is-centered pb-3">The WRITE way to learn writing</h4>
-        <p class="pb-3">EssayWay has is a great way to learn writing with our process - idea, writing, and feedback.<br>
-        Go to the prompts page to start!</p>
-        <img src="{{url_for('static', filename='flowchart.png')}}" alt="flowchart" width="25%" height="25%">
+        <h1 class="title is-1 is-centered pb-4" >Learning Portfolio</h1>
+        <h4 class="subtitle is-4 is-centered pb-3">An AI tool to help you grow from your feedback</h4>
+        <p class="pb-3">Learning Portfolio will track trends in your grades and feedback to help you identify where you are improving, 
+            what you still need to work on, and how you can work on those things. Enter a subject to get started!</p>
+            <form action="{{ url_for("index")}}" method="post">
+    <div class="control is_medium pb-6 field">
+        <p class="pb-2"><b>What subject do you want to track?</b></p>
+        <div class="select is-primary">
+            <select name="wtype">
+                <option>Math</option>
+                <option>Writing</option>
+                <option>Social Studies</option>
+                <option>Art</option>
+                <option>Music</option>
+                <option>Physical Education</option>
+                <option>Language</option>
+            </select>
     </div>
+        <div class="field">
+            <div class="control is-medium pt-5">
+                <button class="button is-submit submit"><a href="/trends">Enter Assignments</a></button>
+            </div>
+        </div>
+    </form>
 </body>
 </html>
